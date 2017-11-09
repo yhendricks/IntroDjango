@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
+from books.views import list_books
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', list_books, name='books')
 ]
 
 if settings.DEBUG:
