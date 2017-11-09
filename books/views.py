@@ -31,9 +31,10 @@ class AuthorList(View):
 
         return render(request, "authors.html", context)
 
+
 class BookDetail(DetailView):
     model = Book
-    template_name = "book_detail.html"
+    template_name = "book.html"
 
 
 class AuthorDetail(DetailView):
